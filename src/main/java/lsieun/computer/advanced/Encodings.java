@@ -9,8 +9,7 @@ public class Encodings {
     public static void main(String[] arg) {
         SortedMap m = Charset.availableCharsets();
         Set k = m.keySet();
-        System.out.println("Canonical name, Display name,"
-                +" Can encode, Aliases");
+        System.out.println("Canonical name, Display name, Can encode, Aliases");
         Iterator i = k.iterator();
         while (i.hasNext()) {
             String n = (String) i.next();
