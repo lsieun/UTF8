@@ -29,3 +29,8 @@ Character-Code Point
 Code Point-Bytes
 
 Culture-Math-Computer
+
+数学-文化（文本）-计算机（存储）
+Character-String-Charset
+
+文化->数学

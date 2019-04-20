@@ -4,8 +4,8 @@
 
 - [1. "Character" Class with Unicode Utility Methods](#1-%22character%22-class-with-unicode-utility-methods)
   - [1.1. isXXX](#11-isxxx)
-  - [1.2. char to CodePoint](#12-char-to-codepoint)
   - [1.3. Code Point to char](#13-code-point-to-char)
+  - [1.2. char to CodePoint](#12-char-to-codepoint)
   - [1.4. Trivial](#14-trivial)
 - [2. Character.toChars() - char Sequence of Code Point](#2-charactertochars---char-sequence-of-code-point)
 - [3. Character.getNumericValue() - Numeric Value of Code Point](#3-charactergetnumericvalue---numeric-value-of-code-point)
@@ -33,16 +33,16 @@ However designers of `J2SE 5.0` did add a number of `static` methods in the `jav
 - `static boolean isDefined(int codePoint)` - Determines if a character (Unicode code point) is defined in Unicode. A character is defined if at least one of the following is true: it has an entry in the `UnicodeData` file or it has a value in a range defined by the `UnicodeData` file.
 - `static boolean isDigit(int codePoint)` - Determines if the specified character (Unicode code point) is a digit. A character is a digit if its general category type, provided by `getType(codePoint)`, is `DECIMAL_DIGIT_NUMBER`.
 
-### 1.2. char to CodePoint
-
-- `static int toCodePoint(char high, char low)` - Converts the specified **surrogate pair** to its **supplementary code point value**. This method does not validate the specified surrogate pair. The caller must validate it using `isSurrogatePair` if necessary.
-- `static int codePointAt(char[] a, int index)` - Returns the code point at the given `index` of the char array. If the char value at the given `index` in the char array is in the high-surrogate range, the following index is less than the length of the char array, and the char value at the following index is in the low-surrogate range, then the supplementary code point corresponding to this surrogate pair is returned. Otherwise, the char value at the given index is returned.
-
 ### 1.3. Code Point to char
 
 - `static char highSurrogate(int codePoint)` - Returns the leading surrogate (a high surrogate code unit) of the surrogate pair representing the specified supplementary character (Unicode code point) in the UTF-16 encoding. If the specified character is not a supplementary character, an unspecified char is returned.
 - `static char lowSurrogate(int codePoint)` - Returns the trailing surrogate (a low surrogate code unit) of the surrogate pair representing the specified supplementary character (Unicode code point) in the UTF-16 encoding. If the specified character is not a supplementary character, an unspecified char is returned.
 - `static char[] toChars(int codePoint)` - Converts the specified character (Unicode code point) to its UTF-16 representation stored in a char array. If the specified code point is a **BMP** (Basic Multilingual Plane or Plane 0) value, the resulting char array has the same value as codePoint. If the specified code point is a **supplementary code point**, the resulting char array has the corresponding surrogate pair.
+
+### 1.2. char to CodePoint
+
+- `static int toCodePoint(char high, char low)` - Converts the specified **surrogate pair** to its **supplementary code point value**. This method does not validate the specified surrogate pair. The caller must validate it using `isSurrogatePair` if necessary.
+- `static int codePointAt(char[] a, int index)` - Returns the code point at the given `index` of the char array. If the char value at the given `index` in the char array is in the high-surrogate range, the following index is less than the length of the char array, and the char value at the following index is in the low-surrogate range, then the supplementary code point corresponding to this surrogate pair is returned. Otherwise, the char value at the given index is returned.
 
 ### 1.4. Trivial
 

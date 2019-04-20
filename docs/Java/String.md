@@ -9,8 +9,8 @@
   - [1.4. Code Point info](#14-code-point-info)
   - [1.5. Byte info](#15-byte-info)
 - [2. String.length() Is Not Number of Characters](#2-stringlength-is-not-number-of-characters)
-- [String.toCharArray() Returns the UTF-16BE Sequence](#stringtochararray-returns-the-utf-16be-sequence)
-- [String Literals and Source Code Encoding](#string-literals-and-source-code-encoding)
+- [3. String.toCharArray() Returns the UTF-16BE Sequence](#3-stringtochararray-returns-the-utf-16be-sequence)
+- [4. String Literals and Source Code Encoding](#4-string-literals-and-source-code-encoding)
 
 <!-- /TOC -->
 
@@ -130,7 +130,7 @@ The output confirms that:
 - `charAt()` always return the "char" value at the given "char" index. It returns the high surrogate "char", if the given index points to the first "char" of a supplementary character - see charAt(2) in the output. It returns the low surrogate "char", if the given index points to the second "char" of a supplementary character - see charAt(3) in the output.
 - `codePointAt()` returns the correct code point value, if the given index points to a **BMP character** - see codePointAt(1). It returns the correct code point value, if the given index points to the first "char" of a supplementary character. - see codePointAt(2). It returns the low surrogate "char", if the given index points to the second "char" of a supplementary character. - see codePointAt(3).
 
-## String.toCharArray() Returns the UTF-16BE Sequence
+## 3. String.toCharArray() Returns the UTF-16BE Sequence
 
 This section provides tutorial example on showing that the output of `toCharArray()` is the same as `getBytes('UTF-16BE')` at the bit level.
 
@@ -216,7 +216,7 @@ The output confirms that:
 - `toCharArray()` returns the same output as the `getByte("UTF-16BE")` at the bit level. In other words, Unicode characters are stored in a "String" object as a UTF-16BE encoded "char" sequence.
 - `getByte("UTF-16BE")` returns the same output as the original code point value list at the bit level.
 
-## String Literals and Source Code Encoding
+## 4. String Literals and Source Code Encoding
 
 URL: [String Literals and Source Code Encoding](http://www.herongyang.com/Unicode/Java-String-Literals-and-Source-Code-Encoding.html)
 

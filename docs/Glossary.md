@@ -8,6 +8,8 @@ a written symbol that represents an idea or object directly rather than a partic
 
 Phonogram
 
+a unit symbol of a phonetic writing system, standing for a speech sound, syllable, or other sequence of speech sounds without reference to meaning.
+
 表意文字和表音文字，发展历程很复杂。基本上凡是自源文字，都是表意字；凡事表音文字，都是借源文字。
 
 作为借源文字的表音字所在的民族，往往都是出现巨大文化变动的，比方说被其他文明侵入导致语种融合文化融合，或者天灾导致文明几乎灭绝等等。出于这种自源源流的丢失或根本就没有自源源流文字，只好借助其他文明的文字然后进行和自身语言的融合以及改造，这种没有源流文字的情况下，势必会以表音文字为最终发展的方向。
