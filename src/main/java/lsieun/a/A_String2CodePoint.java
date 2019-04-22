@@ -16,7 +16,7 @@ public class A_String2CodePoint {
 
         int codePoint = string2CodePoint(ch);
         System.out.println("codePoint: " + codePoint);
-        String hexCode = HexUtils.intToHex(codePoint);
+        String hexCode = HexUtils.fromInt(codePoint).toUpperCase();
         System.out.println("Hex Code:" + hexCode);
 
         //转换之后的字符

@@ -3,7 +3,8 @@ package lsieun.lang.character;
 public class A_CharacterName {
     public static void main(String[] args) {
         int[] codePointArray = new int[] {0x00,
-                0x40, 0xA9, 0xAE,
+                0x41, 0x42, 0x43, // LATIN CAPITAL LETTER
+                0x61, 0x62, 0x63, // LATIN SMALL LETTER
                 0x058D, 0x058E, // 无名字
                 0x1D01, 0x1D02, // LATIN LETTER
                 0x2120, 0x2121, 0x2122, // Mark or Sign

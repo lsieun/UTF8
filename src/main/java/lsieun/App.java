@@ -23,5 +23,7 @@ public class App {
         System.out.println(value);
         System.out.println(str.length());
         System.out.println(str.substring(1,3));
+
+        System.out.println(0x10FFFF);
     }
 }

@@ -5,22 +5,9 @@ import java.nio.charset.StandardCharsets;
 import lsieun.utils.radix.HexUtils;
 
 public class UTF8 {
-    public static void main(String[] args) {
-        String[] characters = new String[] {"A", "Ä", "Ⓐ", "宋", "\uD83C\uDD30"};
-        for(String str : characters) {
-            int codePoint = str.codePointAt(0);
-            System.out.println(str);
-            System.out.println("codePoint: " + codePoint);
-            System.out.println("Hex: 0x" + HexUtils.intToHex(codePoint).toUpperCase());
-            byte[] bytes1 = codePoint2Bytes(codePoint);
-            byte[] bytes2 = str.getBytes(StandardCharsets.UTF_8);
-            System.out.println("bytes1: " + HexUtils.fromBytes(bytes1));
-            System.out.println("bytes2: " + HexUtils.fromBytes(bytes2));
-            System.out.println("=====================================");
-        }
-    }
 
-    public static byte[] codePoint2Bytes(int codePoint) {
+
+    public static byte[] getBytes(int codePoint) {
         if(codePoint < 0 || codePoint > 0x10FFFF) {
             throw new IllegalArgumentException("codePoint should be in range 0~" + 0x10FFFF + ": " + codePoint);
         }
