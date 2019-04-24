@@ -1,5 +1,7 @@
 # Unicode Versions
 
+URL: [Enumerated Versions of The Unicode® Standard](http://www.unicode.org/versions/enumeratedversions.html)
+
 **The Unicode Consortium** first published **The Unicode Standard** in 1991 (**version 1.0**), and has published new versions on a regular basis since then. The latest version of **the Unicode Standard**, **version 12.0**, was released in March 2019, and is available in electronic format from the consortium's website.
 
 | Version | Date    | Total Characters |
